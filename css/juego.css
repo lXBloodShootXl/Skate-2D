@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  aspect-ratio: 2 / 1;
+  border-radius: 0.75rem;
+  background: black;
+}
+
+#fullscreenBtn {
+  bottom: 1rem;
+  right: 1rem;
+}
