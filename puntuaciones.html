@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puntajes - Skate Dash 2D</title>
+  <link rel="stylesheet" href="css/puntuaciones.css">
+</head>
+<body>
+  <div class="background"></div>
+
+  <header class="header">
+    <h1>🏆 Puntajes</h1>
+  </header>
+
+  <main class="contenedor">
+    <!-- Estadísticas generales -->
+    <section class="stats">
+      <div class="card">
+        <h3>Total Jugadores</h3>
+        <p id="totalJug">0</p>
+      </div>
+      <div class="card">
+        <h3>Total Partidas</h3>
+        <p id="totalPart">0</p>
+      </div>
+      <div class="card">
+        <h3>Mejor Puntaje</h3>
+        <p id="mejorPunt">0</p>
+      </div>
+    </section>
+
+    <!-- Controles -->
+    <section class="busqueda">
+  <select id="campoSelect">
+    <option value="nombre">Nombre</option>
+    <option value="puntuacion">Puntuación</option>
+    <option value="fecha">Fecha</option>
+  </select>
+
+  <select id="comparadorSelect">
+    <option value="igual">Igual a</option>
+    <option value="mayor">Mayor a</option>
+    <option value="menor">Menor a</option>
+  </select>
+
+  <input type="text" id="buscarInput" placeholder="🔍 Escribe tu búsqueda...">
+
+  <button id="buscarBtn">Buscar</button>
+  <button id="ordenarBtn">⬇ DESC</button>
+</section>
+
+    <!-- Tabla de puntajes -->
+    <section class="tabla">
+      <h2>Lista de Puntajes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Jugador</th>
+            <th>Puntaje</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPuntajes">
+          <!-- JS llenará aquí -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Acciones -->
+    <div class="acciones">
+      <button id="exportarBtn">📊 Exportar a Excel</button>
+      <button id="volverBtn">⬅ Volver al Menú</button>
+    </div>
+  </main>
+
+  <script src="js/puntuaciones.js"></script>
+</body>
+</html>

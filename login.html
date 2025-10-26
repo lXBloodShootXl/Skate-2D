@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Login Base de Datos</title>
+<style>
+body {
+  font-family: Arial;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <form method="POST" action="verificar_login.php">
+  <label>Usuario:</label>
+  <input type="text" name="usuario" required>
+
+  <label>Contraseña:</label>
+  <input type="password" name="contrasena" required>
+
+  <button type="submit">Conectar</button>
+</form>
+
+</body>
+</html>

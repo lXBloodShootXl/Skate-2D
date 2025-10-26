@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Skate Dash 2D</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/juego.css">
+</head>
+<body
+  class="bg-gradient-to-b from-blue-700 to-blue-400 flex flex-col items-center justify-center min-h-screen text-white font-sans relative">
+
+  <!-- Botón de menú -->
+  <button id="btnVolver"
+    class="absolute top-4 left-4 bg-white/20 hover:bg-white/30 text-white font-semibold px-4 py-2 rounded-lg backdrop-blur-md shadow-md border border-white/30 transition-all z-30">
+    Menú
+  </button>
+
+  <!-- Título -->
+  <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg text-center">Skate Dash 2D</h1>
+
+  <!-- Canvas -->
+  <div class="relative w-full flex justify-center items-center px-2">
+    <canvas id="gameCanvas" width="800" height="400"
+      class="border-4 border-white shadow-2xl rounded-xl"></canvas>
+    <div id="countdown"
+      class="absolute text-6xl md:text-8xl font-extrabold text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.7)] select-none z-10"></div>
+  </div>
+
+  <!-- Pantalla de GAME OVER -->
+  <div id="gameOver"
+    class="hidden absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 text-center z-20 p-4">
+    <h2 class="text-5xl font-bold mb-4 text-red-500 drop-shadow-lg">GAME OVER</h2>
+    <p id="finalScore" class="text-2xl mb-6"></p>
+    <button id="restartBtn"
+      class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg text-lg font-semibold transition-all">Reiniciar</button>
+  </div>
+
+  <!-- Pantalla completa -->
+  <button id="fullscreenBtn"
+    class="hidden fixed z-30 bg-white/30 text-white backdrop-blur-md px-3 py-2 rounded-full border border-white/40 hover:bg-white/40 transition-all">
+    ⛶
+  </button>
+
+  <script src="js/juego.js"></script>
+</body>
+</html>
